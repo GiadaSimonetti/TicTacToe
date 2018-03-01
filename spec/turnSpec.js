@@ -19,7 +19,7 @@ describe("Feature test", function() {
     expect(turn.currentMove).toEqual(0);
   });
 
-  it("sets the current move at 0", function() {
+  it("increment the turn by 1", function() {
     turn.incrementMove();
     expect(turn.currentMove).toEqual(1);
   });

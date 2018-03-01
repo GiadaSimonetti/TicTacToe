@@ -18,4 +18,23 @@ describe("Feature test", function() {
   it("sets the current move at 0", function() {
     expect(turn.currentMove).toEqual(0);
   });
+
+  it("sets the current move at 0", function() {
+    turn.incrementMove();
+    expect(turn.currentMove).toEqual(1);
+  });
+
+  it("sets the player", function() {
+    turn.currentMove = 1;
+    expect(turn.setPlayer(player)).toEqual("X");
+  });
+
+  it("swaps the player", function() {
+    turn.currentMove = 1;
+    console.log(turn.currentMove);
+    // turn.swapPlayer(player);
+    // console.log(turn.swapPlayer(player));
+    expect(turn.swapPlayer(player)).toEqual("O");
+    expect(turn.currentMove).toEqual(1);
+  });
 });

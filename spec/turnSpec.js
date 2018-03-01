@@ -7,21 +7,21 @@ describe("Feature test", function() {
     player = new Player();
   });
 
-  it("sets the first move at 0", function() {
-    expect(turn.FIRST_MOVE).toEqual(0);
+  it("sets the first move at 1", function() {
+    expect(turn.FIRST_MOVE).toEqual(1);
   });
 
   it("sets the last move at 9", function() {
     expect(turn.LAST_MOVE).toEqual(9);
   });
 
-  it("sets the current move at 0", function() {
-    expect(turn.currentMove).toEqual(0);
+  it("sets the current move at 1", function() {
+    expect(turn.currentMove).toEqual(1);
   });
 
   it("increment the turn by 1", function() {
     turn.incrementMove();
-    expect(turn.currentMove).toEqual(1);
+    expect(turn.currentMove).toEqual(2);
   });
 
   it("sets the player", function() {
@@ -32,9 +32,8 @@ describe("Feature test", function() {
   it("swaps the player", function() {
     turn.currentMove = 1;
     console.log(turn.currentMove);
-    // turn.swapPlayer(player);
-    // console.log(turn.swapPlayer(player));
     expect(turn.swapPlayer(player)).toEqual("O");
-    expect(turn.currentMove).toEqual(1);
+    turn.incrementMove();
+    expect(turn.currentMove).toEqual(2);
   });
 });

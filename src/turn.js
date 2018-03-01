@@ -1,5 +1,5 @@
 function Turn(player) {
-  this.FIRST_MOVE = 0;
+  this.FIRST_MOVE = 1;
   this.LAST_MOVE = 9;
   this.currentMove = this.FIRST_MOVE;
   // this.currentPlayer = player.first;

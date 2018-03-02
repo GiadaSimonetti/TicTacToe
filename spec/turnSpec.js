@@ -31,7 +31,6 @@ describe("Feature test", function() {
 
   it("swaps the player", function() {
     turn.currentMove = 1;
-    console.log(turn.currentMove);
     expect(turn.swapPlayer(player)).toEqual("O");
     turn.incrementMove();
     expect(turn.currentMove).toEqual(2);

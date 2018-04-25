@@ -1,8 +1,10 @@
 describe("Feature test", function() {
   var grid;
+  var player;
 
   beforeEach(function() {
     grid = new Grid();
+    player = new Player();
   });
 
   it("should print out the grid", function() {

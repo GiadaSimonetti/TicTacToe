@@ -3,4 +3,6 @@ function Player() {
   this.second = "O";
 }
 
-// Player.prototype.move = function() {};
+// Player.prototype.move = function() {
+//   return ;
+// };
